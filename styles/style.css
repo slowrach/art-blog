@@ -92,7 +92,8 @@ article h1 {
 
 article .avaliation {
    display: flex;
-   gap: 1.2rem;
+   background-color: #7fdbfa;
+   /* gap: 1.2rem; */
    margin-bottom: 3.1rem;
 }
 
@@ -168,8 +169,8 @@ footer {
       max-width: fit-content;
    }
 
-   main .img-cover {
-      height: 30rem;
+   .img-cover {
+      height: 40rem;
    }
 }
 
@@ -188,13 +189,19 @@ footer {
    }
 
    #blog article {
-      margin-top: 4.4rem;
+      margin: 4.4rem 1.2rem 0 0;
       grid-area: article;
-      width: 100rem;
+   }
+
+   .img-cover {
+      width: 80.3rem;
+      height: 40.5rem;
+      object-fit: cover;
    }
 
    #blog aside {
-      margin: 4.4rem 11rem 0 0;
+      margin-top: 4.4rem;
+      margin-right: 11rem;
       grid-area: aside;
    }
 
@@ -203,13 +210,29 @@ footer {
    }
 
    article img {
-      padding-left: 11rem;
+      margin-left: 11rem;
    }
 
    article .content {
-      padding-left: 10.8rem;
+      margin-left: 8.8rem;
    }
 
+   article .avaliation {
+      margin-bottom: 0px;
+      display: flex;
+   }
+
+   article .avaliation img {
+      background-color: #121214;
+   }
+
+   article .title {
+      flex: 1;
+   }
+
+   article .title-box {
+      display: flex;
+   }
 }
 
 @keyframes appear {
