@@ -162,6 +162,7 @@ header form {
    display: flex;
    align-items: center;
    gap: 1rem;
+   margin-inline: auto;
 }
 
 #blog .coments img {
@@ -209,6 +210,10 @@ footer {
       flex-direction: row;
       margin-top: 3.2rem;
       margin-bottom: 3.2rem;
+   }
+
+   #blog .coments {
+      margin: 0;
    }
 }
 
@@ -267,6 +272,10 @@ footer {
 
    #article .content {
       padding: 0 0 1.4rem 0;
+   }
+
+   #blog .coments {
+      margin: 0;
    }
 }
 
