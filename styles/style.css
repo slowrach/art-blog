@@ -26,7 +26,6 @@ body, html, input {
 
 #blog {
    background-color: var(--white);
-   max-width: 43rem;
    margin-inline: auto;
 }
 
@@ -79,46 +78,48 @@ header form {
    object-fit: cover;
 }
 
-article .content, aside {
+#article .content, #aside {
    padding: 0 2.2rem 1.4rem 2.2rem;
 }
 
-article h1 {
-   margin-top: 3.1rem;
-   margin-bottom: 0.8rem;
+#article h1 {
    font-size: 2.4rem;
    font-weight: 700;
 }
 
-article .avaliation {
+.title {
+   padding-top: 3.1rem;
+   padding-bottom: 0.8rem;
+}
+
+#article .avaliation {
    display: flex;
-   background-color: #7fdbfa;
-   /* gap: 1.2rem; */
+   gap: 1.2rem;
    margin-bottom: 3.1rem;
 }
 
-article .avaliation img:hover {
+#article .avaliation img:hover {
    transform: scale(1.1) rotate(-5deg);
 }
 
-article p {
+#article p {
    line-height: 2.6rem;
    text-align: justify;
    margin-bottom: 2rem;
 }
 
-aside h1 {
+#aside h1 {
    margin-bottom: 1.2rem;
 }
 
-aside {
+#aside {
    display: flex;
    flex-direction: column;
    gap: 2rem;
    padding-bottom: 3.7rem;
 }
 
-aside .container {
+#aside .container {
    display: flex;
    gap: 2rem;
    align-items: center;
@@ -126,11 +127,11 @@ aside .container {
    animation: appear 0.5s var(--delay) backwards;
 }
 
-aside .text {
+#aside .text {
    flex: 1;
 }
 
-aside .container img {
+#aside .container img {
    width: 15rem;
    height: 8.4rem;
    object-fit: cover;
@@ -139,22 +140,41 @@ aside .container img {
    transition-duration: 0.5s;
 }
 
-aside .text h2 {
+#aside .text h2 {
    font-size: 1.8rem;
    margin-bottom: 0.8rem;
 }
 
-aside .text p {
+#aside .text p {
    font-size: 1.4rem;
    line-height: 2.24rem;
 }
 
-aside .container:hover p, aside .container:hover h2 {
+#aside .container:hover p, #aside .container:hover h2 {
    text-decoration: underline;
 }
 
-aside .container:hover img {
+#aside .container:hover img {
    transform: scale(1.1);
+}
+
+#blog .coments {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+#blog .coments img {
+   width: 3.5rem;
+}
+
+#blog .coments a {
+   text-decoration: none;
+   color: var(--darkblue);
+}
+
+#blog .coments a:hover {
+   text-decoration: underline;
 }
 
 footer {
@@ -164,7 +184,7 @@ footer {
    padding: 2rem;
 }
 
-@media (min-width: 430px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1440px) {
    #blog {
       max-width: fit-content;
    }
@@ -172,9 +192,27 @@ footer {
    .img-cover {
       height: 40rem;
    }
+
+   .title {
+      padding: 0;
+      flex: 1;
+   }
+
+   #article .avaliation {
+      display: flex;
+      margin-bottom: 0;
+   }
+
+   #article .title-box {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 3.2rem;
+      margin-bottom: 3.2rem;
+   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
    #blog {
       max-width: 100%;
       display: grid;
@@ -188,20 +226,20 @@ footer {
       grid-area: header;
    }
 
-   #blog article {
-      margin: 4.4rem 1.2rem 0 0;
+   #blog #article {
+      margin: 4.4rem 3.4rem 0 11rem;
+      width: 80.3rem;
       grid-area: article;
    }
 
    .img-cover {
-      width: 80.3rem;
       height: 40.5rem;
-      object-fit: cover;
+      border-radius: 5px;
    }
 
-   #blog aside {
-      margin-top: 4.4rem;
-      margin-right: 11rem;
+   #blog #aside {
+      padding: 0;
+      margin: 4.4rem 11rem 0 0;
       grid-area: aside;
    }
 
@@ -209,29 +247,26 @@ footer {
       grid-area: footer;
    }
 
-   article img {
-      margin-left: 11rem;
-   }
-
-   article .content {
-      margin-left: 8.8rem;
-   }
-
-   article .avaliation {
-      margin-bottom: 0px;
+   #article .avaliation {
       display: flex;
+      margin-bottom: 0;
    }
 
-   article .avaliation img {
-      background-color: #121214;
-   }
-
-   article .title {
+   .title {
+      padding: 0;
       flex: 1;
    }
 
-   article .title-box {
+   #article .title-box {
       display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 3.2rem;
+      margin-bottom: 3.2rem;
+   }
+
+   #article .content {
+      padding: 0 0 1.4rem 0;
    }
 }
 
@@ -240,4 +275,4 @@ footer {
       opacity: 0;
       transform: scale(0.7);
    }
-} 
+}
