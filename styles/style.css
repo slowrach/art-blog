@@ -13,11 +13,13 @@
    --titles: #202024;
    --bg-searchbar: #ffffff33;
    --white: #ffffff;
+   --button: hsl(var(--hue), 91%, 21%);
    --darkblue: hsl(var(--hue), 91%, 25%);
    --lightblue: hsl(var(--hue), 46%, 40%);
+   --color: #377d95;
 }
 
-body, html, input {
+body, html, input, textarea, button {
    font-family: 'Mulish', sans-serif;
    font-size: 1.6rem;
 }
@@ -83,13 +85,13 @@ header form {
 }
 
 #article h1 {
-   font-size: 2.4rem;
+   font-size: 3rem;
    font-weight: 700;
 }
 
 .title {
    padding-top: 3.1rem;
-   padding-bottom: 0.8rem;
+   padding-bottom: 2rem;
 }
 
 #article .avaliation {
@@ -98,8 +100,15 @@ header form {
    margin-bottom: 3.1rem;
 }
 
-#article .avaliation img:hover {
-   transform: scale(1.1) rotate(-5deg);
+#article .avaliation button {
+   background: transparent;
+   border: none;
+   border-radius: 50%;
+}
+
+#article .avaliation button:hover {
+   transform: scale(1.2) rotate(-5deg);
+   cursor: pointer;
 }
 
 #article p {
@@ -109,6 +118,7 @@ header form {
 }
 
 #aside h1 {
+   font-size: 2.5rem;
    margin-bottom: 1.2rem;
 }
 
@@ -157,25 +167,59 @@ header form {
 #aside .container:hover img {
    transform: scale(1.1);
 }
+#aside .container:hover {
+   cursor: pointer;
+}
 
 #blog .coments {
    display: flex;
+   flex-direction: column;
    align-items: center;
    gap: 1rem;
-   margin-inline: auto;
 }
 
-#blog .coments img {
-   width: 3.5rem;
+#icons {
+   font-size: 1.4rem;
+   color: var(--lightblue);
+   display: flex;
+   gap: 1.2rem;
 }
 
-#blog .coments a {
-   text-decoration: none;
-   color: var(--darkblue);
+.icon {
+   display: flex;
+   align-items: center;
+   gap: 0.3rem;
 }
 
-#blog .coments a:hover {
-   text-decoration: underline;
+.coments #message {
+   padding: 1rem;
+   width: 100%;
+   height: 10rem;
+   font-size: 1.3rem;
+   border: 1px solid var(--lightblue);
+   border-radius: 0.5rem;
+}
+
+.coments button img {
+   width: 1.8rem;
+}
+
+.coments button {
+   color: var(--white);
+   background-color: var(--lightblue);
+   font-size: 1.4rem;
+   border: none;
+   border-radius: 0.5rem;
+   padding: 0.8rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+}
+
+.coments button:hover {
+   background-color: var(--button);
+   cursor: pointer;
 }
 
 footer {
@@ -188,6 +232,10 @@ footer {
 @media (min-width: 768px) and (max-width: 1440px) {
    #blog {
       max-width: fit-content;
+   }
+
+   header {
+      padding: 1.2rem 6rem;
    }
 
    .img-cover {
@@ -213,7 +261,15 @@ footer {
    }
 
    #blog .coments {
-      margin: 0;
+      align-items: start;
+   }
+
+   .coments #message {
+      width: 30rem;
+   }
+
+   .coments button {
+      margin-left: 0.5rem;
    }
 }
 
@@ -229,6 +285,7 @@ footer {
 
    #blog header {
       grid-area: header;
+      padding: 1.2rem 11rem;
    }
 
    #blog #article {
@@ -275,7 +332,15 @@ footer {
    }
 
    #blog .coments {
-      margin: 0;
+      align-items: start;
+   }
+
+   .coments #message {
+      width: 30rem;
+   }
+
+   .coments button {
+      margin-left: 0.5rem;
    }
 }
 

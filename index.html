@@ -8,12 +8,13 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="styles/style.css">
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
    <title>Blog de Arte</title>
 </head>
 <body>
    <div id="blog">
       <header>
-         <img src="assets/palette.png" alt="ícone de paleta de cores">
+         <a href=""><img src="assets/palette.png" alt="Logo do site"></a>
 
          <form>
             <div class="search-bar">
@@ -34,8 +35,8 @@
                   <h1>Como você se prepara para fazer sua arte?</h1>
                </div>
                <div class="avaliation">
-                  <img src="assets/like.svg" alt="botão de curtir">
-                  <img src="assets/unlike.svg" alt="botão de descurtir">
+                  <button><img src="assets/like.svg" alt="botão de curtir"></button>
+                  <button><img src="assets/unlike.svg" alt="botão de descurtir"></button>
                </div>
             </div>
             <p>Você que é um iniciante da arte, ou até mesmo um artista que busca evoluir-se a cada dia, ao ver as grandes obras de artistas renomados, deve se perguntar qual o segredo para chegar a esse nível de talento e êxito. Será realmente um “dom”, como muitos falam, que algumas pessoas têm o privilégio de nascer com ele? Ou será que existe um passo a passo perfeito a ser seguido?  Ainda não se tem a resposta perfeita para resolver todos os seus problemas, mas, hoje, quero trazer um ponto muito importante quando o assunto é ter um bom desempenho quando se está produzindo e, consequentemente, um bom resultado.</p>
@@ -81,9 +82,16 @@
                <p>Piton é o artista da semana do nosso blog. Venha conhecer a sua história de superação.</p>
             </div>
          </div>
+
+         <div id="icons">
+            <div class="icon"><i class="ph ph-chat-circle-dots"></i> 9</div>
+            <div class="icon"><i class="ph ph-thumbs-up"></i> 26</div>
+            <div class="icon"><i class="ph ph-thumbs-down"></i> 0</div>
+         </div>
+
          <div class="coments">
-            <img src="assets/coments.png" alt="ícone de comentário">
-            <a href="">Deixe aqui seu comentário</a>
+            <textarea id="message" placeholder="Deixe aqui seu comentário..." style="resize: none"></textarea>
+            <button>Enviar</button>
          </div>
       </div>
       
