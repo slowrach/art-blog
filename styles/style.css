@@ -169,18 +169,18 @@ header form {
    cursor: pointer;
 }
 
-#blog .coments {
+.coments {
+   margin-top: 1.5rem;
    display: flex;
    flex-direction: column;
-   align-items: center;
-   gap: 1rem;
+   gap: 0.8rem;
 }
 
 #icons {
    font-size: 1.4rem;
    color: var(--lightblue);
    display: flex;
-   gap: 1.2rem;
+   gap: 1rem;
 }
 
 .icon {
@@ -189,7 +189,7 @@ header form {
    gap: 0.3rem;
 }
 
-.coments #message {
+#message {
    padding: 1rem;
    width: 100%;
    height: 10rem;
@@ -258,11 +258,11 @@ footer {
       margin-bottom: 3.2rem;
    }
 
-   #blog .coments {
+   .coments {
       align-items: start;
    }
 
-   .coments #message {
+   #message {
       width: 30rem;
    }
 
@@ -329,11 +329,12 @@ footer {
       padding: 0 0 1.4rem 0;
    }
 
-   #blog .coments {
+   .coments {
+      grid-area: aside;
       align-items: start;
    }
 
-   .coments #message {
+   #message {
       width: 30rem;
    }
 
