@@ -101,9 +101,7 @@ header form {
 }
 
 #article .avaliation button {
-   background: transparent;
-   border: none;
-   border-radius: 50%;
+   all: unset;
 }
 
 #article .avaliation button:hover {
